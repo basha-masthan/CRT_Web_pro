@@ -1,0 +1,17 @@
+body{ background-color: black; }
+p{text-align: center;color: whitesmoke;}
+h2{color: blue;}
+h4{color: rgb(244, 252, 9);}
+.box{
+    width: auto;height: fit-content;border: 1px solid black;margin: auto;padding: 10px;margin-top: 10px;text-align: center;
+}
+span{ color:rgb(251, 251, 251); font-size:   20px; font-family:monospace; text-decoration-line: underline;}
+#b1{
+    background-color: lightblue;
+}
+#b2{
+    background-color: rgb(117, 40, 145);
+}
+#b3{
+    background-color: rgb(93, 95, 143);
+}
