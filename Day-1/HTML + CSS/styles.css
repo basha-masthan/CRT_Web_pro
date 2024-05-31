@@ -1,13 +1,26 @@
 body{ background-color: black; }
 p{text-align: center;color: whitesmoke;}
+#p1{
+    padding: 10px;width: fit-content;margin: auto;
+    background-color: lightgrey;color: black;font-weight: bold;
+}
+.inn{
+    color: rgb(0, 0, 0);font-weight: 700;border-bottom: 2px dashed rgb(248, 8, 8);width: fit-content;margin:10px auto;padding: 5px;
+}
 h2{color: blue;}
 h4{color: rgb(244, 252, 9);}
 .box{
-    width: auto;height: fit-content;border: 1px solid black;margin: auto;padding: 10px;margin-top: 10px;text-align: center;
+    width: auto;height: fit-content;border: 1px solid black;margin: auto;padding: 10px;margin:10px 10px;text-align: center;
 }
 span{ color:rgb(251, 251, 251); font-size:   20px; font-family:monospace; text-decoration-line: underline;}
 #b1{
     background-color: lightblue;
+}
+#b1 input{
+    padding: 10px; background-color: transparent;font-size: large;margin: 10px 10px;
+}
+#b1 button{
+    padding: 10px 30px;font-size: 20px;
 }
 #b2{
     background-color: rgb(117, 40, 145);
