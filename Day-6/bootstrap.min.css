@@ -1,0 +1,18 @@
+.bg-d{
+    background-color: darkblue;
+    color: #ffff;
+}
+
+.alert{
+    padding: 20px;border-radius: 10pc;text-align: center;
+}
+
+.alert-success{
+    background-color: green;
+    color: #ffff;
+}
+
+.alert-danger{
+    background-color: red;
+    color: #000000;
+}
