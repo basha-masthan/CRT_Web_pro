@@ -1,0 +1,26 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    width: 100vw;height: 100vh;
+    background-image: url('/img/fox-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+
+
+#box{
+    width: 50%;height: 100vh;
+    background: #000000;
+    opacity: 0.6;
+}
+
+
+#box1{
+    width: 50%;height: 100vh;
+    background: #10000087;
+    opacity: 0.6;
+}
