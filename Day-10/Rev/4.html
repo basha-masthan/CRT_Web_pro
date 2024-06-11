@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="row text-center">
+        <p id="day"></p>
+        <h1 id="time"></h1>
+        <!--    <div class="btn btn-primary col-2 mt-3 m-auto"  setInter >Click to change</div> -->
+    </div>
+    <div class="container text-center">
+        <img src="/img/1.png" alt="" id="img">
+    </div>
+    <script>
+        setInterval(img , 2000);
+        
+        // on clicking btn in web page it will change single image by each time
+        function img(){
+            let img = document.getElementById("img");
+            let k = Math.floor(Math.random() * 4);
+            img.src = "/img/"+""+".png";
+        }
+        // find system time 
+        function time(){
+            let d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+        }
+       
+        setInterval(time, 1000);
+
+        function day(){
+            let d = new Date();
+            let day = d.getDay();
+            let m = d.getMonth();
+            let y = d.getFullYear();
+            document.getElementById("day").innerHTML = day + "-" + m + "-" + y;
+        }
+         setInterval(day, 1000);
+    </script>
+</body>
+</html>

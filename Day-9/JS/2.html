@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1 class="alert alert-info text-center text-capitalize shadow col-10 m-auto mt-3  ">Pakistan</h1>
+    <p class="display-5 text-center m-5">Pakistan Will win the match</p>
+    <div class="container m-auto c-10 text-center">
+        <button class="btn btn-info text-bg-light shadow text-danger" onclick="fun()"" ondblclick="bbb()">
+            Announce the win!</button>
+        </button>
+    </div>
+</body>
+<script>
+    function fun(){
+        document.querySelector("h1").innerHTML = "India";
+        document.querySelector("p").innerHTML = "India Won the match by 6 Runs";
+        document.querySelector("h1").setAttribute("class","bg-success text-white alert  col-10 m-auto mt-3 text-center shadow");     
+    }
+    function bbb(){ 
+        document.querySelector("h1").innerHTML = "Pakistan";
+        document.querySelector("p").innerHTML = "Pakistan Lost the match by 6 Runs";
+        document.querySelector("h1").setAttribute("class","bg-danger text-white alert  col-10 m-auto mt-3 text-center shadow");
+
+    }
+</script>
+</html>

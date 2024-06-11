@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <style> 
+      body{
+        background-image: url('/img/hill_moon-bg.jpg');
+        background-position: center;background-repeat: no-repeat;background-size: cover;
+      }
+        #box{
+            height: 60px;width: 70px;
+            border: 1px solid black;  margin: 10px;
+            font-weight: bold;display: flex;
+            align-items: center;justify-content: center;
+            font-size: 25px;
+        }
+        #box:hover{
+            background-color: rgb(136, 180, 177);
+
+            text-shadow: 1px 1px  white,-1px -1px white;
+        }
+        #bb{
+            display: flex;
+            align-items: center;justify-content: center;
+        }
+        #p1{
+            opacity: 0.7;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5 border col-4 shadow alert alert-info" id="p1">
+        <div id="bb" class="txt col-10 container mt-5 m-auto">
+            <input type="text" id="display" class="alert border display-6 col-12 shadow" >
+            </div>
+            <div class="row align-content-center justify-content-center">
+                <div  id="box" class="col-1  alert btn"  id="div" onclick="num(this)">/</div>
+                <div id="box" class="col-1  alert btn"   id="per" onclick="num(this)">%</div>
+                <div id="box" class="col-1  alert btn"  id="mod" onclick="num(this)">**</div>
+                <div id="box" class="col-1  alert btn"  id="back" onclick="num(this)">cc</div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="box" class="col-1  alert btn"  id="n7" onclick="num(this)">7</div>
+                <div id="box" class="col-1  alert btn"  id="n8" onclick="num(this)">8</div>
+                <div id="box" class="col-1  alert btn"  id="n9" onclick="num(this)">9</div>
+                <div id="box" class="col-1  alert btn"  id="add" onclick="num(this)">+</div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="box" class="col-1  alert btn"  id="n4" onclick="num(this)">4</div>
+                <div id="box" class="col-1  alert btn"  id="n5" onclick="num(this)">5</div>
+                <div id="box" class="col-1  alert btn"  id="n6" onclick="num(this)">6</div>
+                <div id="box" class="col-1  alert btn"  id="sub" onclick="num(this)">-</div>
+            </div>
+            <div class="row justify-content-center">
+                <div id="box" class="col-1  alert btn"  id="n1" onclick="num(this)">1</div>
+                <div id="box" class="col-1  alert btn"  id="n2" onclick="num(this)">2</div>
+                <div id="box" class="col-1  alert btn"  id="n3" onclick="num(this)">3</div>
+                <div id="box" class="col-1  alert btn"  id="mul" onclick="num(this)">*</div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                    <div id="box" class="col-2  alert btn" style="height: 60px;width: 160px;" id="n0" onclick="num(this)">0</div>
+                    <div id="box" class="col-1  alert btn"  id="dot" onclick="num(this)">.</div>
+                    <div id="box" class="col-1  alert btn"  onclick="num(this)">=</div>
+                    </div>
+        </div>
+    </div>
+    
+
+<script>
+
+    function num(key){
+        let txtBox = document.getElementById("display");
+
+        let oldVal = txtBox.value;
+        
+        let newVal = key.innerHTML;
+
+        if(newVal == "="){
+            txtBox.value = eval(oldVal);
+        }
+        else if(newVal == "cc"){
+            txtBox.value = "";
+        }
+        else{
+            txtBox.value = oldVal+newVal;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

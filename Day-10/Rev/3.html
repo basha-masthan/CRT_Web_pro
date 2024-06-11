@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="row text-center">
+           <div class="btn btn-primary col-2 mt-3 m-auto"  onclick="img()" >Click to change</div>
+    </div>
+    <div class="container text-center">
+        <img src="/img/1.png" alt="" id="img">
+    </div>
+    <script>
+        
+        function img(){
+            let img = document.getElementById("img");
+            let k = Math.floor(Math.random() * 4);
+            img.src = "/img/"+k+".png";
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <div class="col-10 m-auto alert">
+        <form action="#">
+            <div class="fn alert">
+                <label for="name">First Name :</label>
+                <input type="number"  id="n1" class="form-control">
+            </div>
+            <div class="ln alert">
+                <label for="name" >Last Name :</label>
+                <input type="number"  id="n2" class="form-control" name="">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-secondary" type="button" onclick="calculate('add')">Addition</button>
+                <button class="btn btn-secondary" type="button" onclick="calculate('sub')">Subtraction</button>
+                <button class="btn btn-secondary" type="button" onclick="calculate('mul')">Multiplication</button>
+                <button class="btn btn-secondary" type="button" onclick="calculate('div')">Division</button>
+                <button class="btn btn-secondary" type="button" onclick="calculate('mod')">Modulus</button>
+                <button class="btn btn-secondary" type="button" onclick="calculate('exp')">Exponential</button>
+            </div>
+        </form>
+        <p class="display-4 text-center col-10 m-auto" id="out"></p>
+    </div>
+
+
+    <p class="display-4 alert" id="out"></p>
+
+    <!-- <script>
+        function add(){
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            let a = parseInt(n1);
+            let b = parseInt(n2);
+            let sum = a+b;
+            document.querySelector("#out").innerHTML="Addition of "+ a + " + " + b + " = " + sum;
+        }
+        function sub(){
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            let a = parseInt(n1);
+            let b = parseInt(n2);
+            let sum = a-b;
+            document.querySelector("#out").innerHTML="Addition of "+ a + " - " + b + " = " + sum;
+        }
+        function mul(){
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            let a = parseInt(n1);
+            let b = parseInt(n2);
+            let sum = a*b;
+            document.querySelector("#out").innerHTML="Addition of "+ a + " * " + b + " = " + sum;
+        }
+        function div(){
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            let a = parseInt(n1);
+            let b = parseInt(n2);
+            let sum = a/b;
+            document.querySelector("#out").innerHTML="Addition of "+ a + " / " + b + " = " + sum;
+        }
+        function mod(){
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            let a = parseInt(n1);
+            let b = parseInt(n2);
+            let sum = a%b;
+            document.querySelector("#out").innerHTML="Addition of "+ a + " % " + b + " = " + sum;
+        }
+     
+    </script> -->
+
+    <script>
+        function calculate(operation) {
+            var n1 = parseFloat(document.getElementById("n1").value);
+            var n2 = parseFloat(document.getElementById("n2").value);
+            var result;
+        
+            switch(operation) {
+                case 'add':
+                    document.querySelector("p").innerHTML=n1 + " +  " + n2 + " = " + n1+n2;
+                    break;
+                case 'sub':
+                    result = n1 - n2;
+                    document.querySelector("p").innerHTML= n1 +" - "+ n2 + " = "+ result; 
+                    break;
+                case 'mul':
+                    result = n1 * n2;
+                    document.querySelector("p").innerHTML= n1 +" * "+ n2 + " = "+ result; 
+                    break;
+                case 'div':
+                    result = n1 / n2;
+                    document.querySelector("p").innerHTML= n1 +" / "+ n2 + " = "+ result; 
+                    break;
+                case 'mod':
+                    result = n1 % n2;
+                    document.querySelector("p").innerHTML= n1 +" % "+ n2 + " = "+ result; 
+                    break;
+                case 'exp':
+                    result = n1 ** n2;
+                    document.querySelector("p").innerHTML= n1 +" ** "+ n2 + " = "+ result; 
+                    break;
+                default:
+                    result = "Invalid operation";
+                    break;
+            }
+        
+           
+        }
+        </script>
+</body>
+</html>
