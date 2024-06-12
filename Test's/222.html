@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #007bff; /* Blue background */
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 70pc;
+    max-width: 1200px;
+}
+
+.form-container {
+    background: #fff;
+    /* padding: 60px 40px; */
+
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+input {
+    background: #eee;
+    border: none;
+    /* padding: 15px; */
+    /* margin: 8px 0; */
+    width: 100%;
+}
+
+button {
+    border: none;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-container {
+    display: block;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-login {
+    background-color: #3b5998; Facebook color
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    /* set image icon */
+    background-image: url("https://st2.depositphotos.com/1144386/7770/v/450/depositphotos_77704938-stock-illustration-original-white-round-blue-facebook.jpg");
+    background-repeat: no-repeat;
+    background-position: 10px 11px;
+    background-size: 20px;
+}
+
+.social-login.google {
+    background-color: #ffffff; /* Google color */
+    border: 1px solid darkgray;
+    color: darkgray;
+    /* set image icon */
+    background-image: url("https://img.icons8.com/color/48/000000/google-logo.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px;
+}
+
+.social-login:hover {
+    opacity: 0.8;
+}
+
+.signup-container a {
+    margin-top: 15px;
+    text-align:center;
+}
+button{
+    font-size: 17px;
+}
+#lpd {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  right: 25px;
+  cursor: pointer;
+}
+#spd{
+    position: absolute;
+  top: 31.5%;
+  transform: translateY(-50%);
+  right: 25px;
+  cursor: pointer;
+}
+#cspd{
+    position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  right: 25px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+    <div class="background ">
+        <div class="container m-3">
+            <div class="form-container login-container alert h-75">
+                <form action="#">
+                    <h2 class="alert text-center">Login</h2>
+                    <input class="form-control alert border " type="email" placeholder="Email" required />
+                    <input class="form-control alert border " type="password" placeholder="Password" required />
+                    <!-- <i class="fas fa-eye" aria-hidden="true" id="lpd"></i> -->
+                    <i id="lpd" class="fa fa-eye" aria-hidden="true"></i>
+                    <a href="#" style="padding-left: 140px;">Forgot password?</a>
+                    <button>Login</button>
+                    <p class="text-center">Don't have an account? <a href="#">Signup</a></p>
+                    <div class="row ">
+                        <div class="col-5"><hr></div> Or <div class="col-6"><hr></div>
+                    </div>
+                    <!-- <div style="float:left; width: 43%;"><hr/> </div> Or
+                    <div style="float:right; width: 50%;"><hr/></div> -->
+                    <div class="social-container" >
+                        <button class="social-login alert alert-primary facebook">Login with Facebook</button>
+                        <button class="social-login  google">Login with Google</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-container signup-container alert" >
+                <form action="#">
+                    <h2 class="alert text-center">Signup</h2>
+                    <input class="form-control alert border " type="email" placeholder="Email" required />
+                    <input class="form-control alert border " type="password" placeholder="Create password" required />
+                    <i id="spd" class="fa fa-eye" aria-hidden="true"></i>
+                    <input class="form-control alert border " type="password" placeholder="Confirm password" required />
+                    <i id="cspd" class="fa fa-eye" aria-hidden="true"></i>
+
+                    <button>Signup</button>
+                    <p class="text-center">Already have an account?<a href="#">Login</a></p>
+                    <div class="row ">
+                        <div class="col-6"><hr></div> Or <div class="col-5"><hr></div>
+                    </div>
+                    <div class="social-container">
+                        <button class="social-login alert alert-primary facebook " style="font-size: 17px;">Login with Facebook</button>
+                        <button class="social-login  google">Login with Google</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+//     const passwordInput = document.getElementById('password');
+// const iconPassword = document.querySelector('.icon-password');
+
+// iconPassword.addEventListener('click', () => {
+//   if (passwordInput.type === 'password') {
+//     passwordInput.type = 'text';
+//     iconPassword.classList.remove('fa-eye');
+//     iconPassword.classList.add('fa-eye-slash');
+//   } else {
+//     passwordInput.type = 'password';
+//     iconPassword.classList.remove('fa-eye-slash');
+//     iconPassword.classList.add('fa-eye');
+//   }
+// });
+</script>
+</body>
+</html>

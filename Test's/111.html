@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-button {
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+}
+
+.social-button i {
+  margin-right: 10px;
+}
+
+.icon-password {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <i class="icon-password fas fa-eye"></i>
+      </div>
+      <button type="submit">Login</button>
+      <a href="#">Forgot password?</a>
+      <p>Don't have an account? <a href="#">Signup</a></p>
+      <hr>
+      <div class="social-buttons">
+        <button class="social-button" type="button">
+          <i class="fab fa-facebook-f"></i> Login with Facebook
+        </button>
+        <button class="social-button" type="button">
+          <i class="fab fa-google"></i> Login with Google
+        </button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <h2>Signup</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Create password:</label>
+        <input type="password" id="password" name="password" required>
+        <i class="icon-password fas fa-eye"></i>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <i class="icon-password fas fa-eye"></i>
+      </div>
+      <button type="submit">Signup</button>
+      <p>Already have an account? <a href="#">Login</a></p>
+      <hr>
+      <div class="social-buttons">
+        <button class="social-button" type="button">
+          <i class="fab fa-facebook-f"></i> Login with Facebook
+        </button>
+        <button class="social-button" type="button">
+          <i class="fab fa-google"></i> Login with Google
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+<script>
+  const passwordInput = document.querySelectorAll('input[type="password"]');
+  const iconPassword = document.querySelectorAll('.icon-password');
+
+  iconPassword.forEach((icon, index) => {
+    icon.addEventListener('click', () => {
+      if (passwordInput[index].type === 'password') {
+        passwordInput[index].type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        passwordInput[index].type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    });
+  });
+</script>
+</body>
+</html>

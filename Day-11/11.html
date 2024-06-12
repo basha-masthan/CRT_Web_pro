@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center alert">Form Filler</h1>    
+    </div>
+    <div class="container  alert alert-primary">
+        <div class="col-6 m-auto mt-5 ">
+            <form action="2.html" class="" onsubmit="return pop()">
+                <div class="usr mb-3">
+                    <input class="form-control alert  bg-light  border-1 border-secondary" placeholder="USERNAME" type="text" name="" id="usr" >
+                </div>
+                <div class="psd mb-3">
+                    <input class="form-control alert  bg-light  border-1 border-secondary" type="password" placeholder="PASSWORD" name="" id="psd" >
+                </div>
+                <div class="b col-md-7   m-auto text-center " style="display: flex;justify-content: space-around;">
+                    <button class="btn alert shadow alert-primary btn-secondary display-5" type="submit" >Login</button>
+                    <div class="btn alert shadow alert-info btn-danger display-5" onclick="pp()">Reset</div>
+                    <div class="btn alert shadow alert-primary btn-secondary display-5" type="submit" onclick="pp()">Signup</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+     
+    function pop(){
+        let usr = document.getElementById("usr").value;
+        let psd = document.getElementById("psd").value;
+        if(usr == "" ){
+            alert("Please enter a valid username !"); 
+            return false;
+        }
+        else if(psd == "" || psd.length <= 6){
+            alert("Please enter a valid password !"); 
+            return false;
+        }
+        else{
+            return true;
+        }
+
+
+    }
+
+    </script>
+</body>
+</html>

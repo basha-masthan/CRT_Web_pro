@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">
+            Man Will be Man
+        </h1>
+        <div class="b text-center mt-3" >
+            <div class="btn" onclick="clr('reload');">Refresh</div>
+            <div class="btn btn-primary" onclick="clr('clr')">Change text Color</div>
+            <div class="btn btn-info" id="bg" onclick="clr('bg')">Set BG</div>
+        </div>
+    </div>
+
+    <script>
+        function clr(ch){
+            if(ch == 'clr'){
+                document.querySelector("h1").setAttribute("class", "text-primary text-center");
+                document.querySelector(".btn").setAttribute("class","btn btn-danger");
+            }
+            else if(ch == 'bg'){
+                document.querySelector("h1").setAttribute("class", "bg-primary text-center");
+                document.querySelector(".btn").setAttribute("class","btn btn-danger");
+            }
+            else if(ch == 'reload'){
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+</html>

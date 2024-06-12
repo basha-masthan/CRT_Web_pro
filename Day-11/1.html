@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <h1 class="alert alert-info">JS </h1>
+    <div class="container col-md-5">
+       <form action="#">
+        <div class="mb-3" id="t1">
+            <input class="form-control" type="text" name="" id="txt1">
+        </div>
+        <div class="mb-3" id="t2">
+            <input class="form-control" type="text" name="" id="txt2">
+        </div>
+        <div id="t3" class="mb-3">
+            <input class="form-control" type="text" name="" id="txt3">
+        </div>
+       </form>
+    </div>
+    <div class="col-5 m-auto text-center">
+        <div class="justify-content-between align-content-center">
+            <div class="btn btn-success" onclick="Mul('add');">Add</div>
+            <div class="btn btn-danger" onclick="Mul('sub');">Sub</div>
+            <div class="btn btn-primary" onclick="Mul('Multi')">Mul</div>
+        </div>
+    </div>
+    <script>
+        function Mul(op){
+            let t1 = document.getElementById('txt1').value;
+            let t2 = document.getElementById('txt2').value;
+            let t3=0;
+            if(op == 'add'){
+                t3 = parseFloat(t1) + parseFloat(t2);
+            }
+            else if(op =='sub'){
+                t3 = parseFloat(t1) - parseFloat(t2);
+            }
+            else if(op =='Multi'){
+                t3 = parseFloat(t1) * parseFloat(t2);
+            }
+            document.getElementById('txt3').value = t3;
+        }
+    </script>
+
+</body>
+</html>
