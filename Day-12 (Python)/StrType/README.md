@@ -12,7 +12,7 @@ It will use the same address of a for b,
 print(ID(a))  ==> 1002 
 print(ID(b))  ==> 1002
 ----------
-print(a.__str__())  ==> 100
+print(a.__str__())  ==> 100  //
 print(b.__str__())  ==> 100
 ----------
 print(a) ==> 100
