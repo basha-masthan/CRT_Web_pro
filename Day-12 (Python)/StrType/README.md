@@ -1,0 +1,19 @@
+a = 100
+// a = 100 => int(100)
+
+address of a will store in a;
+ ___
+|100| a = 1002 
+
+when assigng b = 100
+
+It will use the same address of a for b,
+
+print(ID(a))  ==> 1002
+print(ID(b))  ==> 1002
+
+print(a.__str__())  ==> 100
+print(b.__str__())  ==> 100
+
+print(a) ==> 100
+print(b) ==> 100
