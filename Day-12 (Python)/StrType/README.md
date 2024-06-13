@@ -2,11 +2,14 @@ a = 100
 // a = 100 => int(100)
 
 address of a will store in a;
- 
-| 100 |   a = 1002 
-===================
 
 when assigng b = 100
+
+ 
+| 100 |   a = 1002  b = 1002
+===================
+
+
 
 It will use the same address of a for b,
 
