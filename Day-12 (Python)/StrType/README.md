@@ -4,6 +4,7 @@ a = 100
 address of a will store in a;
  
 | 100 |   a = 1002 
+******************
 
 when assigng b = 100
 
